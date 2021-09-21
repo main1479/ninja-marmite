@@ -34,15 +34,15 @@ header span {
 	line-height: 1em;
 }
 header span:first-child {
-	font-size: 1em;
+	font-size: clamp(25px, 4vw, 1em);
 	font-weight: 400;
 }
 header span:last-child {
-	font-size: 1.5em;
+	font-size: clamp(50px, 6vw, 1.5em);
 	font-weight: 800;
 }
 header h2 {
-	font-size: 1.2em;
+	font-size: clamp(25px, 4vw, 1.2em);
 	font-weight: 400;
 }
 footer {
@@ -94,7 +94,7 @@ footer {
 	object-fit: cover;
 }
 .card__title {
-	font-size: clamp(16px, 3vw, 20px);
+	font-size: clamp(20px, 3vw, 20px);
 	font-weight: 500;
 	color: #fff;
 	margin-bottom: 25px;
@@ -187,5 +187,42 @@ p.course {
 	margin-bottom: 25px;
 }
 .method p a {
-	color: rgb(104, 195, 255);
+	color: #68c3ff;
+}
+
+@media only screen and (max-width: 480px) {
+	.recipe-list {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+	.card {
+		grid-template-columns: 1fr;
+	}
+	.card__image {
+		min-height: 200px;
+	}
+	.ingredients__list {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-gap: 10px;
+	}
+
+	.ingredient {
+		font-size: 16px;
+	}
+
+	h1.title {
+		font-size: 30px;
+	}
+	h2.title {
+		font-size: 25px;
+	}
+	.method p {
+		font-size: 16px;
+	}
+
+	footer {
+		font-size: 16px;
+	}
+	.recipe__image {
+		min-height: 200px;
+	}
 }
